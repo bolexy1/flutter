@@ -139,10 +139,10 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      AppColumnLayout(firstText: ticket['date'],  secondText: "Date", alignment: CrossAxisAlignment.start, isColor: false),
-                      AppColumnLayout(firstText: ticket["deperture_time"],  secondText: "Departure time", alignment: CrossAxisAlignment.center, isColor: false),
+                      AppColumnLayout(firstText: ticket['date'],  secondText: "Date", alignment: CrossAxisAlignment.start, isColor: isColor),
+                      AppColumnLayout(firstText: ticket["deperture_time"],  secondText: "Departure time", alignment: CrossAxisAlignment.center, isColor: isColor),
                      
-                      AppColumnLayout(firstText: ticket["number"], secondText: "Number", alignment: CrossAxisAlignment.end, isColor: false),
+                      AppColumnLayout(firstText: ticket["number"], secondText: "Number", alignment: CrossAxisAlignment.end, isColor: isColor),
                                       
                       
                     ],
