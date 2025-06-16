@@ -8,8 +8,10 @@ class Dashboardpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-      Container(        
+      backgroundColor: Colors.grey.shade200,
+      body: ListView(
+        children: [
+          Container(        
         margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),  
         padding: EdgeInsets.symmetric(horizontal: 20),      
         child: Column(          
@@ -17,6 +19,7 @@ class Dashboardpage extends StatelessWidget {
             Row(                   
               mainAxisAlignment: MainAxisAlignment.spaceBetween,         
               children: [
+               
                 Row(
                   children: [
                     Container(                  
@@ -60,57 +63,123 @@ class Dashboardpage extends StatelessWidget {
               children: [
                 Text("Home", style: TextStyle( fontSize:21, fontWeight: FontWeight.bold),),
             SizedBox(height: 20,),
-                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 25,vertical: 20),
-              height: 170,
-              width: 450,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(255, 214, 169, 33)
-              ),
-              child: Stack(
-                children:[
-                  Positioned(
-                      right: -40,
-                      top: 20,
-                      child: Container(
-                        height: 120,
-                        width: 120,
-                        decoration: BoxDecoration(
-                  
-                          image: DecorationImage(
-                            // fit: BoxFit.fitHeight,
-                            fit:BoxFit.contain,
-                            image: AssetImage("assets/images/ads2.jpg"))
-                        ),
-                      ),
-                    ),
-                   Column(
-                  
-                  
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Friday sales", style: TextStyle( fontSize: 16, color: Colors.white,),),
-                    Text("UP TO 30% OFF", style: TextStyle( fontSize: 26, color: const Color.fromARGB(255, 96, 182, 236), fontWeight: FontWeight.bold),),
-                    SizedBox(height: 10,),
-                    Container(
-                      height: 30,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.only(left: 10),
+                   child: Row(                                      
+                     children: [
+                       Container(
+                        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 20),
                         
-                
-                      ),
-                      child: Center(child: Text("Get Now")),
-                    ),
+                                     height: 170,
+                                     width: 400,
+                                     decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(10),
+                                       color: const Color.fromARGB(255, 214, 169, 33)
+                                     ),
+                                     child: Stack(
+                                       children:[
+                        Positioned(
+                            right: -40,
+                            top: 20,
+                            child: Container(
+                              height: 120,
+                              width: 120,
+                              decoration: BoxDecoration(
+                        
+                                image: DecorationImage(
+                                  // fit: BoxFit.fitHeight,
+                                  fit:BoxFit.contain,
+                                  image: AssetImage("assets/images/ads2.jpg"))
+                              ),
+                            ),
+                          ),
+                         Column(
+                        
+                        
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Friday sales", style: TextStyle( fontSize: 16, color: Colors.white,),),
+                          Text("UP TO 30% OFF", style: TextStyle( fontSize: 26, color: const Color.fromARGB(255, 96, 182, 236), fontWeight: FontWeight.bold),),
+                          SizedBox(height: 10,),
+                          Container(
+                            height: 30,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              
+                                       
+                            ),
+                            child: Center(child: Text("Get Now")),
+                          ),
+                         
+                        ],
+                                       ),
+                       
+                                     ]
+                                     ),
+                                   ),
+                                   SizedBox(width: 10,),
+                                    Container(
+                                      
+                        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 20),
+                                     height: 170,
+                                     width: 400,
+                                     decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(10),
+
+                                       color: const Color.fromARGB(255, 214, 169, 33),
+                                       image: DecorationImage(image: 
+                                       AssetImage("images/assets/shoes.jpg"))
+                                     ),
+                                     child: Stack(
+                                       children:[
+                        Positioned(
+                            right: -40,
+                            top: 20,
+                            child: Container(
+                              height: 120,
+                              width: 120,
+                              decoration: BoxDecoration(
+                        
+                                image: DecorationImage(
+                                  // fit: BoxFit.fitHeight,
+                                  fit:BoxFit.contain,
+                                  image: AssetImage("assets/images/ads2.jpg"))
+                              ),
+                            ),
+                          ),
+                         Column(
+                        
+                        
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Friday sales", style: TextStyle( fontSize: 16, color: Colors.white,),),
+                          Text("UP TO 30% OFF", style: TextStyle( fontSize: 26, color: const Color.fromARGB(255, 96, 182, 236), fontWeight: FontWeight.bold),),
+                          SizedBox(height: 10,),
+                          Container(
+                            height: 30,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              
+                                       
+                            ),
+                            child: Center(child: Text("Get Now")),
+                          ),
+                         
+                        ],
+                                       ),
+                       
+                                     ]
+                                     ),
+                                   ),
+                     ],
+                   ),
                    
-                  ],
-                ),
-                 
-              ]
-              ),
-            ),           
+                 ),           
              
               ],              
             )),
@@ -134,8 +203,8 @@ class Dashboardpage extends StatelessWidget {
     itemCount: 6,
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3,
-      crossAxisSpacing: 12,
-      mainAxisSpacing: 12,
+      crossAxisSpacing: 8,
+      mainAxisSpacing: 8,
       childAspectRatio: 1,
     ),
     itemBuilder: (context, index) {
@@ -154,11 +223,26 @@ class Dashboardpage extends StatelessWidget {
       );
     },
   ),
-),           
+),         
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,              
+              children: [
+                Text("Top trends",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                InkWell(
+                  onTap: (){},
+                  child: Text("See All",style: TextStyle(fontSize: 16, ),)),
+              ],
+            ),
+
+
   ]  
     ),
                   
         )
+        ],
+      ) 
+      
           
       );
       
