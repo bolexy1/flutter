@@ -6,7 +6,7 @@ import 'package:gap/gap.dart';
 class AppIconText extends StatelessWidget {
   final IconData icon;
   final String text;
-  const AppIconText({Key? key, required this.icon, required this.text}) : super(key:  key);
+  const AppIconText({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {

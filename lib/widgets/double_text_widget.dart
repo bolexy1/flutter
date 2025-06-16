@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AppDoubleTextWidget extends StatelessWidget {
   final String bigText;
   final String smallText;
-  const AppDoubleTextWidget({Key? key, required this.bigText, required this.smallText}) : super(key: key);
+  const AppDoubleTextWidget({super.key, required this.bigText, required this.smallText});
 
   @override
   Widget build(BuildContext context) {

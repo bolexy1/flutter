@@ -1,4 +1,3 @@
-import 'package:booktickets/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class AssignmentScreen extends StatelessWidget {
